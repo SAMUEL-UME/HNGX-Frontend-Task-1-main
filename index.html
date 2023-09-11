@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #9b595e;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: brown;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: larger;
+        }
+        header h1 {
+            font-size: 40px;
+        }
+
+        header span {
+            display: inline-block;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgb(216, 187, 187);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 data-testid="slackUserName">Ume Chinaza Samuel</h1>
+        <span>
+            <img src="ume.jpg" alt="Ume Chinaza Samuel" data-testid="slackDisplayImage" >
+        </span>
+    </header>
+    <main>
+        <p data-testid="currentDayOfTheWeek">Monday</p>
+        <p data-testid="currentUTCTime"></p>
+        <p data-testid="myTrack">Frontend</p>
+    </main>
+    <footer>
+        <p data-testid="githubURL"><a href="https://github.com/omaah2/HNGX-Frontend-Task-1">GitHub Repository</a></p>
+    </footer>
+
+    <script>
+        const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+        const timestamp = Date.now();
+        currentUTCTimeElement.textContent = `Current UTC Time (in milliseconds): ${timestamp}`;
+    </script>
+</body>
+
+</html>
